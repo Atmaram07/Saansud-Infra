@@ -57,6 +57,53 @@
             window.open("https://www.linkedin.com/sharing/share-offsite/?url=" + url, '_blank');
         });
 
+        // Generic Article Sharing for Blog pages
+        function shareArticle(title, url) {
+            if (!url) {
+                url = window.location.href;
+            }
+
+            if (navigator.share) {
+                navigator.share({
+                    title: title || document.title,
+                    text: title || document.title,
+                    url: url
+                }).catch(function (err) {
+                    console.warn('Share failed:', err);
+                });
+                return;
+            }
+
+            if (navigator.clipboard && navigator.clipboard.writeText) {
+                navigator.clipboard.writeText(url).then(function () {
+                    alert('Link copied to clipboard. You can paste it anywhere to share.');
+                }).catch(function () {
+                    window.prompt('Copy this URL to share', url);
+                });
+            } else {
+                window.prompt('Copy this URL to share', url);
+            }
+        }
+
+        $('.btn-share').on('click', function (e) {
+            e.preventDefault();
+
+            var $btn = $(this);
+            var title = $btn.data('title') || document.title;
+            var url = $btn.data('url') || window.location.href;
+
+            var path = $btn.data('path');
+            if (path) {
+                if (path.match(/^https?:\/\//i)) {
+                    url = path;
+                } else {
+                    url = window.location.origin.replace(/\/$/, '') + '/' + path.replace(/^\/+/, '');
+                }
+            }
+
+            shareArticle(title, url);
+        });
+
         // Hero Slider
         new Swiper(".heroSlider", {
             slidesPerView: 1,

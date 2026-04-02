@@ -258,6 +258,34 @@ img {
   font-family: "Bahnschrift";
   font-weight: 600;
 }
+
+/* Share button styling */
+.btn-share {
+  border: 0.2rem solid #032B3A;
+  color: #032B3A;
+  background-color: transparent;
+  box-shadow: none;
+  padding: 1.2rem 1.8rem;
+  min-width: auto;
+  font-weight: 700;
+  transition: all 0.25s ease-in-out;
+}
+.btn-share::before {
+  content: "🔗";
+  margin-right: 0.8rem;
+  display: inline-block;
+}
+.btn-share:hover,
+.btn-share:focus {
+  background-color: #032B3A;
+  color: #fff;
+  border-color: #032B3A;
+}
+.btn-share:hover::before,
+.btn-share:focus::before {
+  filter: brightness(0.95);
+}
+
 .navbar .navbar-nav .nav-item:hover .nav-link {
   color: #EF5000;
 }
@@ -1915,24 +1943,31 @@ margin-bottom:10px;
 }
 
 .scope-card ul{
-padding-left:18px;
-margin:0;
+  padding-left: 2rem;
+  margin: 0;
+  list-style: disc;
 }
 
 .scope-card li{
-margin-bottom:6px;
+  margin-bottom: 0.8rem;
+  color: #5a7081;
 }
 
 /* Icon */
 .icon-box{
-width:60px;
-height:60px;
-background:#eef2f7;
-border-radius:12px;
-display:flex;
-align-items:center;
-justify-content:center;
-font-size:22px;
+  width: 7rem;
+  height: 7rem;
+  background: linear-gradient(135deg, #e5eaeb 0%, #dff7ff 100%);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 3rem;
+  color: #fff;
+  margin-bottom: 2rem;
+  padding: 1rem;
+  box-shadow: 0 0.5rem 1.5rem rgba(3, 43, 58, 0.3);
+  border: 0.2rem solid #fff;
 }
 .service-card{
 background:#fff;
