@@ -1042,6 +1042,51 @@ ul.legend li span.color-green {
   z-index: 10;
 }
 
+.service-visual {
+  position: relative;
+}
+.service-visual .primary-visual {
+  border-radius: 2rem;
+  overflow: hidden;
+  position: relative;
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.14);
+}
+.service-visual .primary-visual img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+.service-visual .visual-badge {
+  background: #055145;
+  color: #fff;
+  padding: 0.75rem 1.25rem;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+}
+.service-visual .visual-stack {
+  display: grid;
+  gap: 1.5rem;
+}
+.service-visual .visual-stack img {
+  border-radius: 1.75rem;
+  box-shadow: 0 30px 45px rgba(0, 0, 0, 0.12);
+}
+.service-visual .visual-stack .stack-small {
+  transform: translateY(1rem);
+}
+.service-visual .visual-stack .stack-large {
+  height: 100%;
+}
+@media (max-width: 991px) {
+  .service-visual .visual-badge {
+    position: static;
+    display: inline-block;
+    margin-bottom: 1.5rem;
+  }
+}
+
 .page-title {
   padding-top: 22.6rem;
   padding-bottom: 15rem;
@@ -1994,6 +2039,35 @@ font-weight:600;
 padding:20px;
 }
 
+.service-card .btn.btn-orange {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 12rem;
+  padding: 0.95rem 1.8rem;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #f86f00 0%, #d9450f 100%);
+  color: #fff;
+  border: none;
+  box-shadow: 0 16px 30px rgba(217, 72, 13, 0.19);
+  transition: transform 0.28s ease, box-shadow 0.28s ease, filter 0.28s ease;
+  letter-spacing: 0.03em;
+}
+
+.service-card .btn.btn-orange::after {
+  content: '→';
+  display: inline-block;
+  margin-left: 0.8rem;
+  font-size: 1.05rem;
+}
+
+.service-card .btn.btn-orange:hover,
+.service-card .btn.btn-orange:focus {
+  transform: translateY(-3px);
+  box-shadow: 0 22px 40px rgba(217, 72, 13, 0.24);
+  filter: brightness(1.05);
+}
+
 .form-wrapper .alert {
   display: none;
 }
@@ -2051,6 +2125,11 @@ padding:20px;
     background-color: #EF5000;
     left: -30rem;
     transition: left 0.2s;
+    z-index: 100;
+  }
+
+  body.menu-open .navbar div#navbarSupportedContent {
+    left: 0;
   }
 
   body.menu-open:before {

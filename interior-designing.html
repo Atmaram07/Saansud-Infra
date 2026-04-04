@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="keywords" content="interior designing, home design, office interiors, custom interiors, modern design">
+  <meta name="description" content="Professional interior designing services for homes and offices. Create beautiful, functional spaces with expert design solutions.">
+  <meta name="theme-color" content="">
+  <link rel="icon" href="favicon.ico" type="image/x-icon" sizes="16x16">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <title>Interior Designing Services - Saansud Infra</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+  <link type="text/css" rel="stylesheet" href="css/swiper-bundle.min.css?v=1">
+  <link type="text/css" rel="stylesheet" href="css/aos.css?v=1">
+  <link type="text/css" rel="stylesheet" href="css/jquery.fancybox.min.css?v=1">
+  <link type="text/css" rel="stylesheet" href="css/style.css?v=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <header id="site-header">
+    <nav class="navbar navbar-expand-xl">
+      <div class="container">
+        <a class="navbar-brand" href="/">
+          <img src="assets/images/logo_1@2x.png" alt="">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon">
+            <span>&nbsp;</span>
+            <span>&nbsp;</span>
+            <span>&nbsp;</span>
+          </span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
+            <li class="nav-item">
+              <a class="nav-link" href="construction.html">Building constructions</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="about.html">About us</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="Interior solutions.html">Interior Designing</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="projects.html">Apartments</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="blogs.html">Blogs</a>
+            </li>
+            <li class="nav-item">
+              <a class="nav-link" href="contact.html">Contact us</a>
+            </li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+  </header>
+
+  <main>
+    <div class="page-title" style="background-image: url('assets/img/case-study-full-apartment-repaint-in-saket-before-process-cost-breakdown_17571808069656.png');">
+      <div class="container">
+        <div class="row">
+          <div class="col-12 text-center text-white">
+            <h1>Interior Designing Services</h1>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="pad-top-md pad-bottom-md">
+      <div class="container">
+        <div class="service-visual row align-items-center gy-4">
+          <div class="col-lg-7 order-lg-1">
+            <div class="primary-visual">
+              <img src="assets/img/f24e2d1f95ce6442feea3e9263cc2506 copy.jpg" class="img-fluid" alt="Interior Designing - Elegant Living Room">
+              <div class="visual-badge position-absolute top-0 start-0 m-4">Refined interior styling</div>
+            </div>
+          </div>
+          <div class="col-lg-5 order-lg-2">
+            <div class="visual-stack">
+              <img src="assets/img/Bedroom-Interior-Design (1) copy.jpg" class="img-fluid" alt="Interior Designing - Stylish Bedroom">
+              <img src="assets/img/2-Drawing-Room-Interior-with-TV-Unit copy.jpg" class="img-fluid stack-small" alt="Interior Designing - Modern Drawing Room">
+            </div>
+          </div>
+        </div>
+        <h2>Transform Your Space with Interior Designing</h2>
+        <p>Interior designing is the process of shaping the interior of a building to achieve a healthier and more aesthetically pleasing environment. At Saansud Infra, we specialize in creating custom interior designs that reflect your personality and lifestyle. Our team of experienced designers blends functionality with style to deliver spaces that are both beautiful and practical.</p>
+        <h3>Our Interior Design Services</h3>
+        <ul>
+          <li>Residential interior design for homes and apartments</li>
+          <li>Commercial interior design for offices and retail spaces</li>
+          <li>Custom furniture and decor selection</li>
+          <li>Lighting design and installation</li>
+          <li>Color scheme and material recommendations</li>
+          <li>3D visualization and virtual tours</li>
+        </ul>
+        <h3>Why Choose Our Interior Designers?</h3>
+        <p>With years of experience in the field, our interior designers stay updated with the latest trends and technologies. We work closely with clients to understand their vision and budget, ensuring that every project is completed on time and within specifications. Our commitment to quality and customer satisfaction sets us apart in the interior design industry.</p>
+        <p>Contact Saansud Infra today for professional interior designing services that transform your space into a masterpiece.</p>
+        <a href="contact.html" class="btn btn-orange">Get Consultation</a>
+        <a href="https://wa.me/9237384023" target="_blank" rel="noopener noreferrer" class="btn btn-secondary ms-3">Chat on WhatsApp</a>
+      </div>
+    </div>
+  </main>
+
+  <include src="footer.html"></include>
+  <script>
+    document.querySelectorAll("include").forEach(async (el) => {
+      let file = el.getAttribute("src");
+      let resp = await fetch(file);
+      let html = await resp.text();
+      el.outerHTML = html;
+    });
+  </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
