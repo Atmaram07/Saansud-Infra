@@ -10,16 +10,46 @@
             });
         }
 
-         // Bootstrap 5 uses 'show' class to indicate when navbar is open
-        $('.navbar-toggler').on('click', function() {
-            if ($(this).hasClass('collapsed')) {
-            // Remove 'menu-open' when collapsing
-            $('body').removeClass('menu-open');
-            } else {
-            // Add 'menu-open' when expanding
-            $('body').addClass('menu-open');
-            }
-        });
+        // Keep mobile menu state in sync with Bootstrap collapse events.
+        const $navCollapse = $('#navbarSupportedContent');
+        if ($navCollapse.length) {
+            const closeMobileMenu = function () {
+                if ($(window).width() <= 1200 && $navCollapse.hasClass('show')) {
+                    $navCollapse.collapse('hide');
+                }
+            };
+
+            $navCollapse.on('show.bs.collapse', function () {
+                $('body').addClass('menu-open');
+            });
+
+            $navCollapse.on('hidden.bs.collapse', function () {
+                $('body').removeClass('menu-open');
+            });
+
+            $('body').toggleClass('menu-open', $navCollapse.hasClass('show'));
+
+            $('.navbar-nav .nav-link').on('click', function () {
+                if ($(window).width() <= 1200 && $navCollapse.hasClass('show')) {
+                    $navCollapse.collapse('hide');
+                }
+            });
+
+            $(document).on('click', function (e) {
+                if (!$navCollapse.hasClass('show') || $(window).width() > 1200) {
+                    return;
+                }
+                if ($(e.target).closest('#navbarSupportedContent, .navbar-toggler').length === 0) {
+                    closeMobileMenu();
+                }
+            });
+
+            $(document).on('keydown', function (e) {
+                if (e.key === 'Escape') {
+                    closeMobileMenu();
+                }
+            });
+        }
 
         //Collapsable content 
         $('ul.features .title').on('click', function(e){
