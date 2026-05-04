@@ -21,7 +21,7 @@ body {
 /* Main headings */
 h1, h2 {
   font-family: 'Poppins', sans-serif;
-  font-weight: 700;
+  font-weight: 600;
   letter-spacing: -0.02em;
   color: #111827;
 }
@@ -73,7 +73,7 @@ strong, b {
 
   .page-title h1 {
     font-size: clamp(2rem, 4vw, 4rem);
-    font-weight: 800;
+    font-weight: 400;
     letter-spacing: -0.03em;
     margin: 0;
   }
@@ -137,7 +137,7 @@ strong, b {
 
 .stats-title {
   font-size: 42px;
-  font-weight: 800;
+  font-weight: 600;
   letter-spacing: -0.02em;
   margin-bottom: 15px;
 }
@@ -188,7 +188,7 @@ strong, b {
 
 .stat-box h3 {
   font-size: 38px;
-  font-weight: 800;
+  font-weight: 700;
 }
 
 .stat-box p {
