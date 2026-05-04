@@ -115,6 +115,8 @@
             }
         }
 
+        
+
         $('.btn-share').on('click', function (e) {
             e.preventDefault();
 
