@@ -433,12 +433,22 @@ span.subtitle {
 }
 #site-footer .footer-item .menu li {
   margin-bottom: 1rem;
-  padding-left: 2rem;
-  background-image: url(../assets/images/SVG/site-icon.svg);
+  padding-left: 3rem;
   background-repeat: no-repeat;
   background-position: left top 0.3rem;
-  background-size: 0.9rem;
+  background-size: 1.6rem;
 }
+#site-footer .footer-item .menu li.privacy { background-image: url(../assets/images/SVG/envelope.svg); }
+#site-footer .footer-item .menu li.terms { background-image: url(../assets/images/SVG/registration.svg); }
+#site-footer .footer-item .menu li.disclaimer { background-image: url(../assets/images/SVG/envelope.svg); }
+#site-footer .footer-item .menu li.videos { background-image: url(../assets/images/SVG/play-btn.svg); }
+#site-footer .footer-item .menu li.events { background-image: url(../assets/images/SVG/calendar.svg); }
+#site-footer .footer-item .menu li.news { background-image: url(../assets/images/SVG/envelope.svg); }
+#site-footer .footer-item .menu li.blogs { background-image: url(../assets/images/SVG/bookmark.svg); }
+#site-footer .footer-item .menu li.awards { background-image: url(../assets/images/SVG/quality.svg); }
+#site-footer .footer-item .menu li.interior { background-image: url(../assets/images/SVG/interior.svg); }
+#site-footer .footer-item .menu li.careers { background-image: url(../assets/images/SVG/cog.svg); }
+#site-footer .footer-item .menu li.partner { background-image: url(../assets/images/SVG/share.svg); }
 #site-footer .footer-item .menu li a {
   font-family: "Bahnschrift";
   font-weight: 300;
@@ -509,6 +519,47 @@ span.subtitle {
 .social-links a:hover {
   background-color: #EF5000;
   border-color: #EF5000;
+}
+
+.footer-fixed-social {
+  position: fixed !important;
+  top: 50%;
+  right: 1.5rem;
+  transform: translateY(-50%);
+  z-index: 99999;
+  display: flex !important;
+  flex-direction: column !important;
+  align-items: center;
+  justify-content: center;
+  gap: 0.7rem;
+  padding: 0.8rem 0.9rem;
+  background-color: rgba(3, 43, 58, 0.92);
+  border-radius: 3rem;
+  box-shadow: 0 1.2rem 2.4rem rgba(0, 0, 0, 0.18);
+}
+
+.footer-fixed-social a {
+  width: 3.8rem;
+  height: 3.8rem;
+  margin: 0;
+}
+
+@media (max-width: 991.98px) {
+  .footer-fixed-social {
+    right: 1rem;
+    bottom: 1.2rem;
+    top: auto;
+    transform: none;
+    padding: 0.6rem 0.7rem;
+    align-items: center;
+    justify-content: center;
+    flex-direction: row !important;
+    border-radius: 2rem;
+  }
+  .footer-fixed-social a {
+    width: 3.2rem;
+    height: 3.2rem;
+  }
 }
 
 .cascade-image {
@@ -640,6 +691,33 @@ span.subtitle {
   max-width: 58.2rem;
   margin: auto;
   font-size: 1.4rem;
+}
+.careers-sec .sec-title h2 {
+  font-size: 4rem;
+  line-height: 1.05;
+}
+.careers-sec h3 {
+  font-size: 2.4rem;
+  line-height: 1.1;
+  margin-bottom: 1rem;
+}
+.careers-sec h4 {
+  font-size: 2rem;
+  line-height: 1.2;
+  margin-bottom: 1rem;
+}
+.careers-sec h5 {
+  font-size: 1.6rem;
+  line-height: 1.3;
+  margin-bottom: 0.75rem;
+}
+.careers-sec .radius {
+  border-radius: 1.5rem;
+  box-shadow: 0 24px 60px rgba(0, 0, 0, 0.08);
+  border: 1px solid rgba(5, 45, 60, 0.08);
+}
+.careers-sec .row + .row {
+  margin-top: 3rem;
 }
 .sec-title.type-2 span.subtitle {
   font-size: 1.6rem;
