@@ -65,6 +65,8 @@
             }
         });
 
+        
+
         AOS.init(); //Animation init
         jQuery('[data-vbg]').youtube_background();
 

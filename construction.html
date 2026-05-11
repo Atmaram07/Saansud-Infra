@@ -67,10 +67,60 @@
       </div>
     </nav>
     <!-- ./Nav -->
+       <!-- Packages Sticky Section -->
+<section class="package-sticky-section">
+  <div class="container">
+    
+    <div class="package-tabs">
+      <button class="package-tab active" data-target="classic">
+        Classic
+      </button>
+
+      <button class="package-tab" data-target="elite">
+        Elite
+      </button>
+
+      <button class="package-tab" data-target="elegance">
+        Elegance
+      </button>
+    </div>
+
+    <div class="package-content-wrapper">
+      
+      <div class="package-content active" id="classic">
+        <p>
+          If you are looking for solutions with a tight budget – Classic segment
+          will provide value for money interiors. This is also ideal for properties
+          for rental purposes. Cost effective solutions starting from Rs. 2.99
+          lakhs for 2BHK.
+        </p>
+      </div>
+
+      <div class="package-content" id="elite">
+        <p>
+          Elite segment offers premium interiors with enhanced aesthetics,
+          superior materials and optimized space planning. Perfect for modern
+          urban homes with elegant finishes and smart functionality.
+        </p>
+      </div>
+
+      <div class="package-content" id="elegance">
+        <p>
+          Elegance segment delivers luxury interiors with sophisticated styling,
+          designer finishes and customized concepts crafted for high-end living
+          experiences and timeless appeal.
+        </p>
+      </div>
+
+    </div>
+
+  </div>
+</section>
   </header><!--Header End-->
 
   <main>
     <!--Hero-->
+    
     <div class="hero-section">
       <div class="swiper heroSlider">
         <div class="swiper-wrapper">
@@ -103,6 +153,9 @@
         </div>
       </div>
     </div>
+
+  
+    
 
      <!--Icon div-->
      <div class="pad-top-lg pad-bottom-md one-stop-sec">
@@ -411,6 +464,71 @@ I would wholeheartedly recommend SAANSUD INFRA to anyone looking for reliable, t
       let html = await resp.text();
       el.outerHTML = html;
     });
+
+  const tabs = document.querySelectorAll(".package-tab");
+  const contents = document.querySelectorAll(".package-content");
+
+  tabs.forEach(tab => {
+
+    /* Desktop Hover */
+
+    tab.addEventListener("mouseenter", () => {
+
+      if (window.innerWidth > 991) {
+
+        tabs.forEach(btn => btn.classList.remove("active"));
+        contents.forEach(content => content.classList.remove("active"));
+
+        tab.classList.add("active");
+
+        document
+          .getElementById(tab.dataset.target)
+          .classList.add("active");
+      }
+
+    });
+
+    /* Desktop Leave */
+
+    tab.addEventListener("mouseleave", () => {
+
+      if (window.innerWidth > 991) {
+
+        setTimeout(() => {
+
+          tabs.forEach(btn => btn.classList.remove("active"));
+          contents.forEach(content => content.classList.remove("active"));
+
+        }, 100);
+
+      }
+
+    });
+
+    /* Mobile Click */
+
+    tab.addEventListener("click", () => {
+
+      if (window.innerWidth <= 991) {
+
+        const targetContent = document.getElementById(tab.dataset.target);
+
+        const isActive = tab.classList.contains("active");
+
+        tabs.forEach(btn => btn.classList.remove("active"));
+        contents.forEach(content => content.classList.remove("active"));
+
+        if (!isActive) {
+          tab.classList.add("active");
+          targetContent.classList.add("active");
+        }
+
+      }
+
+    });
+
+  });
+
   </script>
 
 
