@@ -671,7 +671,7 @@ Full form testing:
 
 These are important if someone is maintaining the repo.
 
-- Many pages contain text encoding artifacts such as `â€‹`, `Â`, and similar mojibake characters
+- Many pages contain text encoding artifacts such as ``, `Â`, and similar mojibake characters
 - `footer.html` links to missing pages: `videos.html`, `events.html`, `news.html`, `blogs.html`
 - `construction.html` still uses the title `Saansud Infra - Home`
 - `career.html` marks both Career and Contact nav items as active
