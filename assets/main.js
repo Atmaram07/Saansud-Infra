@@ -16,7 +16,24 @@ document.addEventListener("DOMContentLoaded",()=>{
     const phone=(data.get("phone")||"").trim();
     const status=form.querySelector(".form-status");
     if(!name||!phone){status.textContent="Please add your name and phone number.";return;}
-    status.textContent="Thanks, "+name+". This demo form is working locally, but it is not connected to a business inbox yet. Connect a form backend or CRM before launch.";
-    form.reset();
+    const email=(data.get("email")||"").trim();
+    const service=(data.get("service")||"Project enquiry").trim();
+    const location=(data.get("location")||"Bhubaneswar, Odisha").trim();
+    const budget=(data.get("budget")||"Not provided").trim();
+    const details=(data.get("details")||"Not provided").trim();
+    const subject=encodeURIComponent("Project enquiry: "+service);
+    const body=encodeURIComponent([
+      "New project enquiry for Saansud Infra",
+      "Name: "+name,
+      "Phone: "+phone,
+      "Email: "+(email||"Not provided"),
+      "Service: "+service,
+      "Location: "+location,
+      "Budget: "+budget,
+      "Project details: "+details
+    ].join("\n"));
+    status.textContent="Your email app should open with the enquiry details. Review the message and press Send to contact Saansud Infra. You can also call +91 92373 84023.";
+    window.location.href="mailto:info@saansud.com?subject="+subject+"&body="+body;
+
   });
 });
